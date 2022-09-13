@@ -1,0 +1,12 @@
+
+{% block body %}
+        <h1>Portfolio</h1>
+<div id="photos">
+    {% for post in posts %}
+
+
+            <a href="{% url 'post:detail' post.id %}"><img onclick="magnify($(this).attr('src'))" src="{{post.post_image.url}}"></a>
+
+    {% endfor %}
+    </div>
+{% endblock body%}

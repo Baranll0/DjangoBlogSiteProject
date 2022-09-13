@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <meta name="author" content="Bharat Agarwal">
+  <meta name="description" content="A login and SignUp page whith smooth animations">
+  <link rel="stylesheet" href="{% static 'main.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static 'main.js'%}"></script>
+</head>
+
+<body>
+
+<form method="post">
+  {% csrf_token %}
+
+  <div id="box">
+    <div id="main">
+
+    </div>
+    <div id="loginform">
+      <h1>Login</h1>
+      {{ form|crispy }}
+
+
+      <a><button type="submit" name="button" style="cursor:pointer;">Login</button></a>
+    </div>
+    <div id="signupform">
+      <h3>Dear user, <br>Contact my social media accounts<br> for manager recruitment.</h3>
+
+    </div>
+
+    <div id="login_msg">
+      Have an account?
+    </div>
+
+    <div id="signup_msg">
+      Admin Panel
+    </div>
+    <button type="button" name="button" id="login_btn">LOGIN</button>
+    <button type="button" name="button" id="signup_btn">Hire me</button>
+  </div>
+</form>
+</body>
+
+</html>

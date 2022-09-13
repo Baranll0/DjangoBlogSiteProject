@@ -1,0 +1,93 @@
+
+<html>
+{% load static %}
+{% load crispy_forms_tags %}
+ <head>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+ </head>
+</html>
+<body>
+<div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">Baran Güçlü</td>
+                <td id="navigation">
+                    <a href="{% url 'index'%}">Portfolio</a>
+                    <a href="{% url 'index'%}">About</a>
+                    <a href="{% url 'index'%}">Contact</a>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'user:logout'%}">Logout</a>
+                        <a href="{% url 'post:dashboard'%}">Admin Panel</a>
+                    {% else %}
+                        <a href="{% url 'user:login'%}">Login</a>
+                    {% endif%}
+                </td>
+            </tr>
+        </table>
+    </header>
+<br><br><br><br><br>
+<div id="contact">
+        <h1>Contact</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div id="inner_div">
+                            <table id="inner_table">
+                                <tr>
+                                    <td><i class="fas fa-phone"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-at"></i> &nbsp; gbaran180@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-map-marker-alt"></i>
+                                    <div id="address">
+                                        University Quarter<br>
+                                        Bilen Street<br>
+                                        No:29 Battalgazi-Malatya/Turkey
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="social" href="https://www.youtube.com/channel/UCKCGOxFpA-1_L4Exbkt_Lzw"><i class="fab fa-youtube"></i></a>
+                                        <a class="social" href="https://twitter.com/Baranll0"><i class="fab fa-twitter"></i></a>
+                                        <a class="social" href="https://www.instagram.com/Baranll1"><i class="fab fa-instagram"></i></a>
+                                        <a class="social" href="https://github.com/Baranll0"><i class="fab fa-github"></i></a>
+                                        <a class="social" href="https://www.linkedin.com/in/baran-güçlü-207b1a226/"><i class="fab fa-linkedin"></i></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form|crispy}}
+                            <button class="btn_one" type="submit">Gönder</button>
+                        </form>
+
+
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <script src="{% static 'js/index.js'%}" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+
+
+
