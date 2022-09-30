@@ -23,7 +23,7 @@ tenacity==8.0.1
 toml==0.10.2
 uuid==1.30
 virtualenv==20.10.0
-werkzeug==2.0.3
+
 wrapt==1.13.3
 
 zope.interface==5.4.0
