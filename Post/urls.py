@@ -7,7 +7,6 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
-from simple_chatbot.views import SimpleChatbot
 app_name="post"
 
 urlpatterns=[
