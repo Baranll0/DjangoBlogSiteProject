@@ -43,7 +43,7 @@ Pillow==9.2.0
 psycopg2==2.9.3
 PyJWT==2.4.0
 pytz==2022.2.1
-PyYAML==3.13
+PyYAML==6.0
 regex==2022.8.17
 requests==2.28.1
 sqlparse==0.4.2
