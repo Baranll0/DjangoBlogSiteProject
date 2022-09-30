@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'user',
     "ckeditor",
     "django_cleanup",
-    "simple_chatbot",
     "Contact",
 
 
