@@ -31,8 +31,6 @@ Pillow==9.2.0
 plotly==5.10.0
 psycopg2==2.9.3
 pypiwin32==223
-python-dateutil==1.5
-
 PyYAML==5.4.1
 regex==2022.8.17
 requests==2.26.0
