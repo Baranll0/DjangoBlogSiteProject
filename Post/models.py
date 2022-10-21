@@ -1,3 +1,4 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 from ckeditor.fields import RichTextField
 # Create your models here.

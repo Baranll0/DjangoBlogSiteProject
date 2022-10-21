@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'Post',
     'user',
     "ckeditor",
+
     "django_cleanup",
     "Contact",
 
@@ -127,9 +128,19 @@ CKEDITOR_CONFIGS={
     "default":{
         "removePlugins":"stylesheetparser",
         "allowedContent":True,
-        "width":"100%"
+        "width":"100%",
+        'codeSnippet_theme':'monokai',
+        'codeSnippet_languages':
+        {
+            'python':'Python',
+            'java':'Java',
+            'c':'C',
+
+        }
+        
     }
 }
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 django_heroku.settings(locals())

@@ -29,6 +29,7 @@ urlpatterns = [
     path('about',views.about,name="about"),
     path('posts/',include("Post.urls")),
     path('user/',include("user.urls")),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
