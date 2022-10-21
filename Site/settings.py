@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'Post',
     'user',
     "ckeditor",
-
     "django_cleanup",
     "Contact",
 
@@ -129,7 +128,6 @@ CKEDITOR_CONFIGS={
         "removePlugins":"stylesheetparser",
         "allowedContent":True,
         "width":"100%",
-        'codeSnippet_theme':'monokai',
         'codeSnippet_languages':
         {
             'python':'Python',
