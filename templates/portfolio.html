@@ -3,7 +3,9 @@
         <h1>Portfolio</h1>
 <div id="photos">
     {% for post in posts %}
+        {% if post.post_image %}
             <a href="{% url 'post:detail' post.id %}"><img onclick="magnify($(this).attr('src'))" src="{{post.post_image.url}}"></a>
+        {% endif %}
     {% endfor %}
     </div>
 {% endblock body%}
