@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 class Post(models.Model):
     author=models.ForeignKey("auth.User",on_delete=models.CASCADE,verbose_name="Kullanıcı")
     title = models.CharField(max_length=50,verbose_name="Başlık")
-    content=RichTextField()
+    content=RichTextField(max_length=50000)
     created_date=models.DateTimeField(auto_now_add=True,verbose_name="Tarih")
     post_image=models.FileField(blank=True,null=True,verbose_name="Posta fotoğraf ekleyin")
     def __str__(self):

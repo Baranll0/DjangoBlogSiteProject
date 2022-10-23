@@ -9,7 +9,6 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     context=dict()
     context['posts']=Post.objects.all()
-
     return render(request,"index.html",context)
 def about(request):
     return render(request,"about.html")
