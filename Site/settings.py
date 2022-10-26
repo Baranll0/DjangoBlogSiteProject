@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'Site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'd8uaqu33qsft6b',
-        'USER': 'mlwpwixsktskbi',
-        'PASSWORD':'c4229a63bed333f37f56b757fec475d290d16cdbf5ee13018db943124f5141e9',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbrlt1q63vohkj',
+        'USER': 'zimgwitzehkecu',
+        'PASSWORD':'9ed391ab75f2a1a49bf51bf2beb646cfefd1f322193394cf0f3070b572bf5034',
         'POST':'5432',
-        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com'
+        'HOST': 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com'
     }
 }
 
