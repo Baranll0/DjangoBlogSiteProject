@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+#@y^+!o)3=el0u=r8ixp-!4$fdt(k)nzljtj&vhssz9jeo7vi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['https://django-projectyazilim.herokuapp.com']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -77,7 +77,11 @@ WSGI_APPLICATION = 'Site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'd8uaqu33qsft6b',
+        'USER': 'mlwpwixsktskbi',
+        'PASSWORD':'c4229a63bed333f37f56b757fec475d290d16cdbf5ee13018db943124f5141e9',
+        'POST':'5432',
+        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com'
     }
 }
 
