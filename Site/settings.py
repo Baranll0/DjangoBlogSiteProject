@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+#@y^+!o)3=el0u=r8ixp-!4$fdt(k)nzljtj&vhssz9jeo7vi'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False
-ALLOWED_HOSTS = ['https://django-projectyazilim.herokuapp.com']
+DEBUG =True
+ALLOWED_HOSTS = []
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "ckeditor",
     "django_cleanup",
     "Contact",
-
 ]
 
 MIDDLEWARE = [
@@ -70,23 +69,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Site.wsgi.application'
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbrlt1q63vohkj',
-        'USER': 'zimgwitzehkecu',
-        'PASSWORD':'9ed391ab75f2a1a49bf51bf2beb646cfefd1f322193394cf0f3070b572bf5034',
-        'POST':'5432',
-        'HOST': 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join('db.sqlite3'),
     }
 }
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -144,7 +134,6 @@ CKEDITOR_CONFIGS={
 }
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
