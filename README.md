@@ -14,12 +14,12 @@ Additionally,with features such as categories, tags, and titles for each post,<b
     <b>Django:</b> The blog site was developed using the Django web framework.
     <b>Bootstrap:</b> The blog design was created using the Boostrap front-end library.
     <b>User Authentication:</b> User registration and login processes were implemented using Django's built-in User Authentication features.
-    <b>Blog Posts:</b> A separate page was designed for blog posts<br>and users were given the ability to comment on blog posts.<br>
+    <b>Blog Posts:</b> A separate page was designed for blog posts<br>and users were given the ability to comment on blog posts.
     <b>CRUD Operations:</b> The built-in CRUD(Create,Read,Update,Delete) features of Django were used to allow the administrator to create,<br> update and delete blog posts.
     <b>Search Functionality:</b>Users were given the ability<br>to search among blog posts.
     <b>Pagination:</b>Page numbers and pagination buttons were<br>added for situations where there are a large number of<br>blog posts.
-    <b>Social Media Sharing:</b>Social media sharing buttons<br>are available, making it easy for users to share<br>and communicate.
-    <b><i>Blog posts written in Markdown language are supported.</i></b><br>
+    <b>Social Media Sharing:</b>Social media sharing buttons<br>are available, making it easy for users to share<br>and communicate.<br>
+    <b><i>Blog posts written in Markdown language are supported.</i></b>
     <b><i>Blog posts can be added,edited and deleted via the<br>admin panel</i></b></p></pre>
     <hr>
     <img src="https://media.giphy.com/media/eLucBrxHIGwygJ2YXt/giphy.gif">
