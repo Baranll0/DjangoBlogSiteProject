@@ -2,7 +2,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,21 +13,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="{% static 'main.js'%}"></script>
 </head>
-
 <body>
-
 <form method="post">
   {% csrf_token %}
-
   <div id="box">
     <div id="main">
-
     </div>
     <div id="loginform">
       <h1>Login</h1>
       {{ form|crispy }}
-
-
       <a><button type="submit" name="button" style="cursor:pointer;">Login</button></a>
     </div>
     <div id="signupform">
@@ -48,5 +41,4 @@
   </div>
 </form>
 </body>
-
 </html>
