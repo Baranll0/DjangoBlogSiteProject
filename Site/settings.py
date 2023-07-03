@@ -75,11 +75,11 @@ WSGI_APPLICATION = 'Site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER':'postgres',
-        'PASSWORD':'12491304',
-        'HOST':'https://baran-guclu-910e9820ce43.herokuapp.com',
-        'PORT':''
+        'NAME': 'dej2bsjskvpsod',
+        'USER':'ytbygzsitgxgyz',
+        'PASSWORD':'791746b5488c20b066f4d44d9c272d0e97490637d63b8a1ea35cb09990e5919b',
+        'HOST':'ec2-99-80-210-37.eu-west-1.compute.amazonaws.com',
+        'PORT':'5432'
     }
 }
 # Password validation
