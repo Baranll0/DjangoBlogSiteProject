@@ -78,8 +78,8 @@ DATABASES = {
         'NAME': 'postgres',
         'USER':'postgres',
         'PASSWORD':'12491304',
-        'HOST':'localhost',
-        'PORT':'5432'
+        'HOST':'https://baran-guclu-910e9820ce43.herokuapp.com',
+        'PORT':''
     }
 }
 # Password validation
