@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+#@y^+!o)3=el0u=r8ixp-!4$fdt(k)nzljtj&vhssz9jeo7vi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =False
-ALLOWED_HOSTS = ['www.baranguclu.site', 'baranguclu.site','localhost']
+ALLOWED_HOSTS = ['www.baranguclu.site', 'baranguclu.site','localhost','https://baran-guclu-910e9820ce43.herokuapp.com']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -143,8 +143,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
-
-if os.getcwd()=='/app':
-    SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
-    SECURE_SSL_REDIRECT=True
-    DEBUG=False
