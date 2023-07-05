@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-+#@y^+!o)3=el0u=r8ixp-!4$fdt(k)nzljtj&vhssz9jeo7vi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 ALLOWED_HOSTS = ['www.baranguclu.site', 'baranguclu.site','localhost','https://baran-guclu-910e9820ce43.herokuapp.com']
+CSRF_TRUSTED_ORIGINS=['https://www.baranguclu.site','https://baranguclu.site']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
