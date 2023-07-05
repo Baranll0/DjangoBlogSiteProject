@@ -4,6 +4,8 @@ from .forms import ContactForm
 from django.core.mail import send_mail,BadHeaderError
 from django.conf import settings
 from .models import Contact
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
 def emailView(request):
     if request.method =="POST":
         form=ContactForm(request.POST)
