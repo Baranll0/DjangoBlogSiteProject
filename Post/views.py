@@ -3,6 +3,7 @@ import os
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404,reverse
 from .forms import PostForm
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 from .models import Post,Comment
 from django.contrib.auth.decorators import login_required
@@ -12,6 +13,7 @@ def index(request):
     return render(request,"index.html",context)
 def about(request):
     return render(request,"about.html")
+
 @login_required(login_url="user:login")
 def dashboard(request):
     posts=Post.objects.filter(author=request.user)
@@ -19,6 +21,7 @@ def dashboard(request):
         "posts":posts
     }
     return render(request,"dashboard.html",context)
+@csrf_exempt
 @login_required(login_url="user:login")
 def addpost(request):
     form=PostForm(request.POST or None,request.FILES or None)
@@ -37,6 +40,7 @@ def detail(request,id):
         "comments":comments,
     }
     return  render(request,"detail.html",context)
+@csrf_exempt
 @login_required(login_url="user:login")
 def updatePost(request,id):
     post = get_object_or_404(Post,id=id)
@@ -48,12 +52,14 @@ def updatePost(request,id):
         messages.success(request,"Post güncellendi.")
         return redirect("post:dashboard")
     return render(request,"update.html",{"form":form})
+@csrf_exempt
 @login_required(login_url="user:login")
 def deletePost(request,id):
     post = get_object_or_404(Post,id=id)
     post.delete()
     messages.success(request,"Post silindi.")
     return redirect("post:dashboard")
+@csrf_exempt
 def addComment(request,id):
     post=get_object_or_404(Post,id=id)
     if request.method == "POST":
