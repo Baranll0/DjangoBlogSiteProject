@@ -57,22 +57,22 @@ Additionally,with features such as categories, tags, and titles for each post,<b
     <hr>
     <br>
     <h2>Screenshot:</h2>
-    <img src="demo1.png">
-    <img src="demo2.png">
-    <img src="demo3.png">
-    <img src="demo4.png">
-    <img src="demo5.png">
-    <img src="demo6.png">
-    <img src="demo7.png">
-    <img src="demo8.png">
-    <img src="demo9.png">
-    <img src="demo10.png">
-    <img src="demo11.png">
-    <img src="demo12.png">
-    <img src="demo13.png">
-    <img src="demo14.png">
-    <img src="demo15.png">
-    <img src="demo16.png">
+    <img src="https://i.imgur.com/AFrAaht.png">
+    <img src="https://i.imgur.com/5yB9GUZ.png">
+    <img src="https://i.imgur.com/jOKT07I.png">
+    <img src="https://i.imgur.com/Ik4wbUc.png">
+    <img src="https://i.imgur.com/DlRItbr.png">
+    <img src="https://i.imgur.com/AB4kK3o.png">
+    <img src="https://i.imgur.com/Sv8zJyd.png">
+    <img src="https://i.imgur.com/EDS3RGI.png">
+    <img src="https://i.imgur.com/f8SqH2g.png">
+    <img src="https://i.imgur.com/9Aw4djW.png">
+    <img src="https://i.imgur.com/ocuagBz.png">
+    <img src="https://i.imgur.com/9eInpko.png">
+    <img src="https://i.imgur.com/vMKsijm.png">
+    <img src="https://i.imgur.com/k7z1Dh0.png">
+    <img src="https://i.imgur.com/TAttPrZ.png">
+    <img src="https://i.imgur.com/ZZsALXB.png">
     <br><br><br>
     <hr>
     <strong>Good luck with your work everyone! If you have any questions,you now know that<br> you can reach me through my social media accounts on my profile. See you later!</strong>
