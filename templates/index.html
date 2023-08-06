@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 {% load static %}
 {% load crispy_forms_tags %}
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Baran'ın Blogu, Web Geliştirme, Yapay Zeka, Veri Bilimi ve Makine Öğrenmesi gibi yazılım alanları hakkında bilgi sunar. Bu alanları ayrıntılı olarak keşfedin.">
-    <meta name="keywords" content="Yazılım, Web Geliştirme, Yapay Zeka, Veri Bilimi, Makine Öğrenmesi">
+    <meta name="description" content="Baran'ın Blogu, Web Geliştirme, Yapay Zeka, Veri Bilimi ve Makine Öğrenmesi üzerine detaylı yazılar ve projeler sunar.">
+    <meta name="keywords" content="Yazılım, Web Geliştirme, Yapay Zeka, Veri Bilimi, Makine Öğrenmesi, Blog">
     <meta name="author" content="Baran Güçlü">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Baran's Blog Site</title>
+    <title>Web Geliştirme, Yapay Zeka, Veri Bilimi ve Makine Öğrenmesi - Baran'ın Blogu</title>
+    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -27,64 +28,75 @@
   gtag('config', 'G-H78QZKW7R8');
 </script>
 <body>
-    {% include 'navbar.html' %}
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <div {% if message.tags %} class="alert alert-danger"{% endif %}>{{ message }}</div>
-    {% endfor %}
-</ul>
-{% endif %}
-    <table id="top_part">
-        <tr>
-            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
-                <h1>Software Engineer</h1>
-                <a href="#bio"><button class="btn_one">See about me</button><br></a>
-                <table>
-                    <tr>
-                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://www.youtube.com/channel/UCKCGOxFpA-1_L4Exbkt_Lzw"><i class="fab fa-youtube"></i></a></td>
-                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://twitter.com/Baranll0"><i class="fab fa-twitter"></i></a></td>
-                        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://www.instagram.com/Baranll1"><i class="fab fa-instagram"></i></a></td>
-                        <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="https://github.com/Baranll0"><i class="fab fa-github"></i></a></td>
-                        <td class="animated zoomIn" style="animation-delay:3.0s;"><a class="social" href="https://www.linkedin.com/in/baran-güçlü-207b1a226/"><i class="fab fa-linkedin"></i></a></td>
-                    </tr>
-                </table>
-            </td>
-            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:1.5s;"></td>
-        </tr>
-    </table>
-    <div id="work">
-        <h1>Portfolio</h1>
-        <div id="photos">
-            {% for post in posts %}
-                {% if post.post_image %}
-                    <a href="{% url 'post:detail' post.id %}"><img onclick="magnify($(this).attr('src'))" src="{{post.post_image.url}}"></a>
-                {% endif %}
-            {% endfor %}
-    </div>
-    </div>
+        {% include 'navbar.html' %}
 
-    <div id="bio">
-        <h1>About</h1>
-        <p>
-            İnönü Üniversitesi Yazılım Mühendisliği bölümünde aktif eğitim süreci devam eden biri. Yazılım dünyasının çeşitli disiplinlerine giren bir dizi detaylıca incelenmesi ve uygulanmasında rol oynuyor. Nesneye Yönelik Programlama, Veri Yapıları, Program Yapısı ve Anlamı, Sayısal Analiz, Kullanıcı Etkileşimli Programlama, Yazılım Gereksinimleri ve Analizi gibi alanlarda öğrenilenler çeşitli projelerin geliştirilmesinde kullanılıyor.
-        </p>
-        <p>
-            SOLID prensipleri ışığında farklı otomasyon projeleri üzerinde çalışmalar yapıp öğrenilen gereksinim ve analiz ile projeyi doğru bir şekilde ilerletmeler yaptı.
-        </p>
-        <p>
-            Algoritma karmaşıklığının analizinde öğrenilenlerle bir bakış sergileyip belirli sıralama algoritmalarının karmaşıklıklarını hesaplamada ve analiz etmede kritik bir rol oynuyor. Ayrıca, bir programın kaynak kodunun çalıştırılabilir koda dönüştürülmesi sürecinin detayları üzerinde yoğunlaştı ve bu konuda Medium'da düşüncelerini aktardı.
-        </p>
-        <p>
-            Önceden ilgilenilen Web Geliştirme alanında HTML,CSS,JavaScript ve Python dilini aktif şekilde kullandı. Backend tarafında Django, veritabanında SQLite ve PostgreSQL teknolojilerini kullanarak Kişisel Blog Projesi gibi projeleri başarıyla hayata geçirdi. 
-        </p>
-        <p>
-            Kullanıcı Etkileşimli Programlama ile öğrenilen Figma aracılığıyla projeler oluşturup bu projelerin yazılım gereksinimleri ve analizi dersinden öğrenilenlerle birleştirdi.
-        </p>
-        <p>
-            Asıl konu ise şuanda ilerleyen kariyer hayatında Veri Bilimi alanına olan derin ilgisi ile öğrenmeye başladığı : İstatistik, SQL,Python(NumPy, Pandas, Matplotlib, Seaborn) ve EDA gibi alanlarda kendini geliştirmeye devam ediyor ve bu çalışmalarla beraber basit projeler ile ilgileniyor.
-        </p>
-    </div>
+    <main>
+{% if messages %}
+    <section>
+        <ul class="messages">
+            {% for message in messages %}
+            <div {% if message.tags %} class="alert alert-danger"{% endif %}>{{ message }}</div>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}
+    <section>
+        <table id="top_part">
+            <tr>
+                <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                    <h1>Software Engineer</h1>
+                    <a href="#bio"><button class="btn_one">See about me</button><br></a>
+                    <table>
+                        <tr>
+                            <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://www.youtube.com/channel/UCKCGOxFpA-1_L4Exbkt_Lzw"><i class="fab fa-youtube"></i></a></td>
+                            <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://twitter.com/Baranll0"><i class="fab fa-twitter"></i></a></td>
+                            <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://www.instagram.com/Baranll1"><i class="fab fa-instagram"></i></a></td>
+                            <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="https://github.com/Baranll0"><i class="fab fa-github"></i></a></td>
+                            <td class="animated zoomIn" style="animation-delay:3.0s;"><a class="social" href="https://www.linkedin.com/in/baran-güçlü-207b1a226/"><i class="fab fa-linkedin"></i></a></td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="rightImage" class="animated jackInTheBox" style="animation-delay:1.5s;"></td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <div id="work">
+            <h1>Portfolio</h1>
+            <div id="photos">
+                {% for post in posts %}
+                    {% if post.post_image %}
+                        <a href="{% url 'post:detail' post.id %}"><img onclick="magnify($(this).attr('src'))" src="{{post.post_image.url}}"></a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <article>
+        <div id="bio">
+            <h1>About</h1>
+            <p>
+                İnönü Üniversitesi Yazılım Mühendisliği bölümünde aktif eğitim süreci devam eden biri. Yazılım dünyasının çeşitli disiplinlerine giren bir dizi detaylıca incelenmesi ve uygulanmasında rol oynuyor. Nesneye Yönelik Programlama, Veri Yapıları, Program Yapısı ve Anlamı, Sayısal Analiz, Kullanıcı Etkileşimli Programlama, Yazılım Gereksinimleri ve Analizi gibi alanlarda öğrenilenler çeşitli projelerin geliştirilmesinde kullanılıyor.
+            </p>
+            <p>
+                SOLID prensipleri ışığında farklı otomasyon projeleri üzerinde çalışmalar yapıp öğrenilen gereksinim ve analiz ile projeyi doğru bir şekilde ilerletmeler yaptı.
+            </p>
+            <p>
+                Algoritma karmaşıklığının analizinde öğrenilenlerle bir bakış sergileyip belirli sıralama algoritmalarının karmaşıklıklarını hesaplamada ve analiz etmede kritik bir rol oynuyor. Ayrıca, bir programın kaynak kodunun çalıştırılabilir koda dönüştürülmesi sürecinin detayları üzerinde yoğunlaştı ve bu konuda Medium'da düşüncelerini aktardı.
+            </p>
+            <p>
+                Önceden ilgilenilen Web Geliştirme alanında HTML,CSS,JavaScript ve Python dilini aktif şekilde kullandı. Backend tarafında Django, veritabanında SQLite ve PostgreSQL teknolojilerini kullanarak Kişisel Blog Projesi gibi projeleri başarıyla hayata geçirdi. 
+            </p>
+            <p>
+                Kullanıcı Etkileşimli Programlama ile öğrenilen Figma aracılığıyla projeler oluşturup bu projelerin yazılım gereksinimleri ve analizi dersinden öğrenilenlerle birleştirdi.
+            </p>
+            <p>
+                Asıl konu ise şuanda ilerleyen kariyer hayatında Veri Bilimi alanına olan derin ilgisi ile öğrenmeye başladığı : İstatistik, SQL,Python(NumPy, Pandas, Matplotlib, Seaborn) ve EDA gibi alanlarda kendini geliştirmeye devam ediyor ve bu çalışmalarla beraber basit projeler ile ilgileniyor.
+            </p>
+        </div>
+    </article>
+</main>
+<footer>
     <div id="contact">
         <h1>Contact</h1>
             <table>
@@ -127,16 +139,11 @@
             </table>
     </div>
 
-
-
-
-
-
-
-
+    
     <div id="footer">
         made on earth by a human <br> <a href="https://github.com/Baranll0">Baran</a>
     </div>
+</footer>
 
     <script src="{% static 'js/index.js'%}" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
